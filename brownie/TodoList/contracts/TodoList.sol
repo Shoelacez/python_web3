@@ -6,12 +6,18 @@ contract ToDo{
     // events
     event createdSuccesfully(address user, string task, string message);
     event updatedSuccesfully(address user, string task, string message);
+
     struct Task{
         string task;
         bool complete;
     }
 
     Task[] public tasks;
+
+    // constructor
+    constructor() payable{
+        require(msg.value == 1 ether, "Pay only 1 ether to use this dapp");
+    }
 
     // create a to-do list
     function createTask(string memory _task) public {
@@ -35,6 +41,7 @@ contract ToDo{
     function toggleComplete(uint _at) public {
        tasks[_at].complete = ! tasks[_at].complete;
     }
+
 }
 
 
