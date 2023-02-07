@@ -18,8 +18,8 @@ def main():
     address = todo.address
     print(f"Address: {address}")
 
-    # balance_todo = todo.balance()
-    # print(f"Balance: {balance_todo}")
+    balance_todo = todo.balance()
+    print(f"Balance: {balance_todo}")
 
-    # events_present = todo.events
-    # print(f"Events: {events_present}")
+    events_present = todo.events
+    print(f"Events: {events_present}")
