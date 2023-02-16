@@ -1,2 +1,2 @@
-networks:
- default: gorli_test
+# networks:
+#  default: gorli_test
